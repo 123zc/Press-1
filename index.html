@@ -2,16 +2,31 @@
 <html>
 
 <body>
-
-    <input type=button id="button" onclick="setButton(gen())" value="1" />
-
+    <div id="page">
+        <input type=button id="button" onclick="setButton(gen())" value="1" />
+    </div>
 </body>
 
+<style>
+    #button {
+        font-size: 40px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    
+    #page {
+        text-align: center;
+    }
+
+</style>
+
 <script type="application/javascript">
-    var tit = ["The "]
-    var pre = ["", "African "];
+    var tit = ["The ", "Mr. ", "Sir "]
+    var pre = ["", "African ", "Trans "];
     var mid = ["Under", "Trans", "Psycho"];
-    var end = ["taler", " Juggalo", " Clown"];
+    var end = ["taler", " Juggalo", " Clown", "gater"];
 
     function gen() {
         return rand(tit) + rand(pre) + rand(mid) + rand(end);
