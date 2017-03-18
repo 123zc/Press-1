@@ -4,6 +4,7 @@
 <body>
     <div id="page">
         <input type=button id="button" onclick="setButton(gen())" value="1" />
+        <div id="amount"></div>
     </div>
 </body>
 
@@ -18,6 +19,14 @@
     
     #page {
         text-align: center;
+        overflow-x: hidden;
+    }
+    
+    #amount {
+        left: 0;
+        right: 0;
+        bottom: 0%;
+        position: absolute;
     }
 
 </style>
@@ -38,6 +47,10 @@
 
     function setButton(str) {
         document.getElementById("button").value = str;
+    }
+
+    window.onload = function() {
+        document.getElementById("amount").innerHTML = "There are currently " + (tit.length * pre.length * mid.length * end.length) + " possible Munchy characters."
     }
 
 </script>
