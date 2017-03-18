@@ -1,0 +1,25 @@
+<body>
+
+    <input type=button id="button" onclick="setButton(gen())" value="1" />
+
+</body>
+
+<script type="application/javascript">
+    var tit = ["The "]
+    var pre = ["", "African "];
+    var mid = ["Under", "Trans", "Psycho"];
+    var end = ["taler", " Juggalo", " Clown"];
+
+    function gen() {
+        return rand(tit) + rand(pre) + rand(mid) + rand(end);
+    }
+
+    function rand(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function setButton(str) {
+        document.getElementById("button").value = str;
+    }
+
+</script>
